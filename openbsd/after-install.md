@@ -7,6 +7,14 @@ man afterboot
 man intro
 ```
 
+## Configure pf
+
+Check pf.md
+
+## Configure sshd
+
+Check sshd.md
+
 ## Locale support
 
 Follow the steps on the faq to set up utf-8.  https://www.openbsd.org/faq/faq10.html#locales
@@ -53,37 +61,16 @@ CHECKFILESYSTEMS=1
 man 8 daily
 ```
 
-## Configure pf
-
-/etc/pf.conf
-```
-tcp_pass = "{22}"
-block log
-
-pass in proto icmp
-pass in on egress proto tcp to port $tcp_pass
-pass out
-```
-
-Some useful commands.
-```
-pfctl -f /etc/pf.conf #reload rules
-pfctl -F all #empty firewall rules
-pfctl -sr #list all active rules
-```
-
-# Disable root login and use pubkey auth
-
-/etc/ssh/sshd_config
-```
-PermitRootLogin no
-PubkeyAuthentication yes
-PasswordAuthentication no
-```
-
-# Get notification about important stuff
+## Get notification about important stuff
 
 Subscribe to the following mailinglists:
  * announce
  * security-announce
  * ports-security
+
+## Great information sources
+
+ * [host with openbsd](https://si3t.ch/ah/en/)
+ * [openbsd faq](https://www.openbsd.org/faq/)
+ * [openbsd handbook](https://www.openbsdhandbook.com/)
+
