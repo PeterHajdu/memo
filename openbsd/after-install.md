@@ -21,7 +21,11 @@ $ pkg_add -D snap noto-fonts noto-cjk noto-emoji
 
 ## Set default umask to 077
 
-In  /etc/login.conf set the default umask to ```077```.
+Add to ~/.profile and /etc/skel/.profile
+
+```
+umask 077
+```
 
 ## Edit /etc/mail/aliases
 
