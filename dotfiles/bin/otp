@@ -1,0 +1,2 @@
+oathtool --totp=SHA1 --base32 '******'
+
