@@ -1,5 +1,5 @@
-posts:
-	./build-hptr.sh > public_html/posts.html
+default:
+	./build-hptr.sh
 
 deploy:
 	chmod -R a+Xr public_gopher

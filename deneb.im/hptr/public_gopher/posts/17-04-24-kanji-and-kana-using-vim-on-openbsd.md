@@ -1,4 +1,4 @@
-# Kanji and kana using vim on openbsd
+## Kanji and kana using vim on openbsd
 
 Around one year ago I started learning Japanese.  Until now I procrastinated writing kanji with vim.
 Finally the time has come to solve the issue.

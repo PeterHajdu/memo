@@ -1,3 +1,8 @@
+### 2024-04-24
+
+Users are allowed to create personal http and gopher pages.
+For more info have a look at motd.
+
 ### 2024-04-16
 
 Gopher and http pages are generated from the same source.
