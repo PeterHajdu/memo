@@ -1,4 +1,4 @@
-www/news.html:
+default:
 	./build-news.sh > www/news.html
 
 deploy:
@@ -6,6 +6,4 @@ deploy:
 	scp -r gopher/* deneb.im:/var/gopher
 	scp -r www/* deneb.im:/var/www/htdocs/deneb.im/
 
-all: www/news.html
-
-.phony: all deploy
+.phony: deploy
