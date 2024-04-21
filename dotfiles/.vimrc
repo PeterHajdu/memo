@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'tyru/eskk.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 set nocompatible
@@ -24,7 +25,7 @@ set tabstop=2
 
 " look and feel
 set background=dark
-set colorcolumn=100
+set colorcolumn=70
 
 " always show statusline
 set laststatus=2
