@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>hptr@deneb.im / posts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<h1 style=text-align:center>hptr@deneb.im</h1>
+<h1 id="kanji-and-kana-using-vim-on-openbsd">Kanji and kana using vim on openbsd</h1>
+
+<p>Around one year ago I started learning Japanese.  Until now I procrastinated writing kanji with vim.
+Finally the time has come to solve the issue.</p>
+
+<p>First you need to install tyru&#47;eskk.vim plugin with your preferred vim plugin manager.
+With vim-plug you need to add the following code to your vimrc.</p>
+
+<pre><code>call plug#begin()
+Plug &#39;tyru&#47;eskk.vim&#39;
+call plug#end()
+</code></pre>
+
+<p>After install (:PlugInstall) you already have hiragana and katakana but kanji support is still
+missing.  You can start using kana in insert mode after <code>&#60;C-j&#62;</code> and switching between katakana and
+hiragana with <code>&#60;q&#62;</code>.  For kanji support you still need a dictionary.  Fortunately
+<em>skk-jisyo-20201101</em> is available as a package.</p>
+
+<pre><code>pkg_add skk-jisyo-20201101
+</code></pre>
+
+<p>There&#8217;s only one last step to solve.  Find out how to use hiragana to kanji translation with eskk.
+In hiragana mode type in <code>;いぬ&#60;space&#62;</code>.  The result should be: 犬</p>
+
+<p>仮名 と 漢字 を 畫くこと が できます。</p>
+</html>

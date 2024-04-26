@@ -39,7 +39,7 @@ function build_footer {
 
 function build_index {
   build_header
-  for file in `ls -1 public_gopher/posts/`; do
+  for file in `ls -1t public_gopher/posts/`; do
     echo "<a href=""posts/$file.html"">$file</a><br>"
   done
   build_footer
@@ -54,7 +54,7 @@ function build_post {
 
 build_index > public_html/index.html
 mkdir -p public_html/posts
-for file in `ls public_gopher/posts`; do
+for file in `ls -t public_gopher/posts`; do
   build_post $file > public_html/posts/$file.html;
 done
 
