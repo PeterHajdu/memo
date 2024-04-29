@@ -1,3 +1,8 @@
+### 2024-04-29
+
+Daily backups are created of /etc /home /var/gopher /var/www.  The
+backup is stored encrypted.
+
 ### 2024-04-24
 
 Users are allowed to create personal http and gopher pages.

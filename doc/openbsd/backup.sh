@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 folders="/etc /home /var/www /var/gopher"
 
