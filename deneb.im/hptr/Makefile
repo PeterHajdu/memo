@@ -1,5 +1,6 @@
 default:
-	./build-hptr.sh
+	./build-gopher.sh
+	./build-html.sh
 
 deploy:
 	chmod -R a+Xr public_gopher
