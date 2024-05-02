@@ -4,8 +4,8 @@ default:
 
 deploy:
 	chmod -R a+Xr public_gopher
-	scp -r public_gopher deneb.im:
+	openrsync --rsync-path=openrsync -r --del ./public_gopher/ deneb.im:public_gopher
 	chmod -R a+Xr public_html
-	scp -r public_html/* deneb.im:public_html/
+	openrsync --rsync-path=openrsync -r --del ./public_html/ deneb.im:public_html
 
 .phony: posts deploy
