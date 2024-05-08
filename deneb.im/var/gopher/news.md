@@ -1,3 +1,7 @@
+### 2024-05-08
+
+Secondary mail server is up.
+
 ### 2024-04-29
 
 Daily backups are created of /etc /home /var/gopher /var/www.  The
