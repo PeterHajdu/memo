@@ -80,10 +80,39 @@ function install_sshguard {
   rcctl start sshguard
 }
 
+function setup_acme_client {
+  cp /etc/examples/acme-client.conf /etc
+  echo 'edit /etc/acme-client.conf (hostname)'
+  echo 'if you are unsure use letsencrypt-staging'
+  read
+}
+
+function setup_httpd {
+  cp /etc/examples/httpd.conf /etc
+  echo 'edit /etc/httpd.conf (hostname, key, cert)'
+  echo 'enable ports 80 and 443 in /etc/pf.conf'
+  read
+  echo 'enabling and starting httpd'
+  rcctl enable httpd
+  rcctl start httpd
+}
+
+function run_acme_client {
+  echo 'run acme-client -v <hostname>'
+  echo 'if all is fine: add the following to /etc/weekly.local'
+  echo 'acme-client -vv <hostname>'
+  echo 'rcctl reload httpd'
+  echo 'rcctl restart smtpd'
+  read
+}
+
 check_ssh
 check_pf
 check_aliases
 check_filesystems_daily
 install_pf_badhost
 install_sshguard
+setup_acme_client
+setup_httpd
+run_acme_client
 
