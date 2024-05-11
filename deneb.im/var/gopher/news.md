@@ -1,3 +1,7 @@
+### 2024-05-10
+
+Second user added.
+
 ### 2024-05-08
 
 Secondary mail server is up.
