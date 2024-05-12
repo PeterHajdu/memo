@@ -46,3 +46,10 @@ openssl req -newkey rsa:4096 -keyout my.private.key -out my.csr
 ```
 openssl ca -config ca.conf -out my.crt -infiles my.csr
 ```
+
+## generate self signed cert with passwordless key
+
+```
+openssl req -new -nodes -x509 -keyout domain.key -x509 -days 365 -out domain.pem
+```
+
