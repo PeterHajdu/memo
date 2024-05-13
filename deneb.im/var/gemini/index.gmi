@@ -1,0 +1,11 @@
+# deneb.im
+
+Deneb.im is a personal experiment of hosting network services
+on OpenBSD.
+contact: @hptr
+
+=> news.md deneb.im news
+=> gopher://deneb.im/~hptr hptr
+=> gopher://deneb.im/~tobal tobal
+=> gopher://deneb.im/~fix1256 fix1256
+
