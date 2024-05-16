@@ -5,7 +5,7 @@ on OpenBSD.
 contact: @hptr
 
 => news.md deneb.im news
-=> gopher://deneb.im/~hptr hptr
+=> gemini://deneb.im/users/hptr/ hptr
 => gopher://deneb.im/~tobal tobal
 => gopher://deneb.im/~fix1256 fix1256
 
